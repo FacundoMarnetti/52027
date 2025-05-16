@@ -20,7 +20,7 @@ const tokens = new antlr4.CommonTokenStream(lexer);
 tokens.fill();
 const tokenList = [...tokens.tokens]; // ✅ Esta lista mantiene los tokens aunque el parser los use
 
-console.log("📋 Tabla de tokens:");
+console.log(" Tabla de tokens:");
 console.log(`Cantidad de tokens encontrados: ${tokenList.length}`);
 console.log('N°\tLexema\t\t\tToken');
 tokenList.forEach((token, idx) => {
@@ -35,7 +35,7 @@ parser.buildParseTrees = true;
 const tree = parser.programa();
 
 // Mostrar árbol
-console.log('\n🌳 Árbol de análisis sintáctico:');
+console.log('\n Árbol de análisis sintáctico:');
 console.log(tree.toStringTree(parser.ruleNames));
 
 // Aplicar visitor para generar salida
@@ -43,5 +43,5 @@ const visitor = new CustomUsuarioVisitor();
 const salida = visitor.visit(tree);
 
 // Mostrar código generado
-console.log('\n🧠 Código generado:\n');
+console.log('\n Código generado:\n');
 console.log(salida);
