@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug ANTLR Usuario.g4",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "input.txt",
+      "grammar": "Usuario.g4",
+      "startRule": "programa",
+      "printParseTree": true,
+      "visualParseTree": true
+    }
+  ]
+}

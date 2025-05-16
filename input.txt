@@ -1,0 +1,5 @@
+usuario Usuario1 {
+  nombre = "Lionel Messi";
+  edad = 37;
+  activo = verdadero;
+}
