@@ -2,7 +2,7 @@ import antlr4 from 'antlr4';
 import fs from 'fs';
 import UsuarioLexer from './generated/UsuarioLexer.js';
 import UsuarioParser from './generated/UsuarioParser.js';
-import CustomUsuarioVisitor from './CustomUsuarioVisitor.mjs';
+import CustomUsuarioVisitor from './CustomUsuarioVisitor.js';
 
 // Leer input.txt
 let input;
@@ -33,6 +33,14 @@ tokenList.forEach((token, idx) => {
 const parser = new UsuarioParser(tokens);
 parser.buildParseTrees = true;
 const tree = parser.programa();
+
+// Verificar errores
+if (parser._syntaxErrors > 0) {
+  console.error("❌ Se encontraron errores de sintaxis.");
+  process.exit(1);
+}
+
+console.log("\n✅ Entrada válida.\n");
 
 // Mostrar árbol
 console.log('\n Árbol de análisis sintáctico:');

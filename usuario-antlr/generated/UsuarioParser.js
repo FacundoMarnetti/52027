@@ -1,4 +1,4 @@
-// Generated from Usuario.g4 by ANTLR 4.13.2
+// Generated from c:/Users/HP/52027/usuario-antlr/Usuario.g4 by ANTLR 4.13.2
 // jshint ignore: start
 import antlr4 from 'antlr4';
 import UsuarioListener from './UsuarioListener.js';

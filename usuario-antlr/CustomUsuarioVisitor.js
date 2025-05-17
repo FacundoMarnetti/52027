@@ -1,10 +1,8 @@
 import UsuarioVisitor from './generated/UsuarioVisitor.js';
 
 export default class CustomUsuarioVisitor extends UsuarioVisitor {
-
   visitPrograma(ctx) {
-    const usuarios = ctx.usuario();
-    return usuarios.map(u => this.visit(u)).join('\n\n');
+    return ctx.usuario().map(u => this.visit(u)).join('\n\n');
   }
 
   visitUsuario(ctx) {
@@ -20,13 +18,14 @@ export default class CustomUsuarioVisitor extends UsuarioVisitor {
   }
 
   visitValor(ctx) {
-  if (ctx.numero()) return this.visit(ctx.numero());
-  if (ctx.cadena()) return this.visit(ctx.cadena());
-  if (ctx.BOOLEANO()) return ctx.BOOLEANO().getText() === 'verdadero' ? 'true' : 'false';
-  return 'null';
-}
-
-
+    if (ctx.numero()) return this.visit(ctx.numero());
+    if (ctx.cadena()) return this.visit(ctx.cadena());
+    if (ctx.BOOLEANO()) {
+      const boolText = ctx.BOOLEANO().getText();
+      return boolText === 'verdadero' ? 'true' : 'false';
+    }
+    return 'null';
+  }
 
   visitNumero(ctx) {
     return ctx.NUMERO().getText();
@@ -34,9 +33,5 @@ export default class CustomUsuarioVisitor extends UsuarioVisitor {
 
   visitCadena(ctx) {
     return ctx.CADENA().getText();
-  }
-
-  visitBooleano(ctx) {
-    return ctx.getText() === 'verdadero' ? 'true' : 'false';
   }
 }
