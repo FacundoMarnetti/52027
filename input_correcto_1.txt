@@ -1,0 +1,11 @@
+usuario Usuario1 {
+  nombre = "Juan Pérez";
+  edad = 30;
+  activo = verdadero;
+}
+
+usuario Usuario2 {
+  nombre = "Laura";
+  edad = 25;
+  activo = falso;
+}
