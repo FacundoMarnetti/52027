@@ -27,7 +27,7 @@ Permite analizar archivos que definen usuarios con atributos, validar su sintaxi
 
 ## Instalación
 
-1. Clona este repertorio: git clone https://github.com/FacundoMarnetti/52027.git
+1. Clona este repositorio: git clone https://github.com/FacundoMarnetti/52027.git
 2. Abrir una terminal: cd 52027/usuario-antlr
 3. Ejecutar: code .
 4. Se abrirá el proyecto en visual studio
