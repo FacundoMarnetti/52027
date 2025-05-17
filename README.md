@@ -39,9 +39,9 @@ Permite analizar archivos que definen usuarios con atributos, validar su sintaxi
 3. Ejecutar el programa con: npm start
 
 - El programa mostrará:
- - Tabla de tokens generados
- - Árbol sintáctico en texto
- - Código JavaScript generado usando Visitor
+ - Tabla de tokens generados.
+ - Árbol sintáctico en texto.
+ - Código JavaScript generado usando Visitor.
 
 
 # Visualización del árbol (Parse Tree)
